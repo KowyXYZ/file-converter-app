@@ -18,21 +18,7 @@ export default function Navbar({ }): any {
             <p>FileFuze</p>
 
             </Link>
-            <div className="hidden gap-1 md:gap-2 lg:gap-4 md:flex">
-                <Button variant="ghost" className="font-semibold text-md">
-                    <Link href="/">Home</Link>
-                </Button>
-                <Link href="/about">
-                    <Button variant="ghost" className="font-semibold text-md">
-                        About
-                    </Button>
-                </Link>
-                <Link href="/privacy-policy">
-                    <Button variant="ghost" className="font-semibold text-md">
-                        Privacy Policy
-                    </Button>
-                </Link>
-            </div>
+
             <div className="items-center hidden gap-2 md:flex">
                 <ModeToggle />
                 <Link href="https://github.com/KowyXYZ">
@@ -59,27 +45,24 @@ export default function Navbar({ }): any {
                     <SheetHeader>
                         <SheetDescription>
                             <div className="flex flex-col w-full h-full">
-                                <SheetTrigger asChild>
-                                    <Link href="/">
-                                        <Button variant="link" className="w-full font-semibold text-md">
-                                            Home
-                                        </Button>
-                                    </Link>
+
+                            <SheetTrigger asChild>
+                            <Link href="https://github.com/KowyXYZ">
+                                <Button
+                                    variant="default"
+                                    className="items-center hidden gap-2 bg-[#9333ea] rounded-full w-fit md:flex"
+                                    size="lg"
+                                >
+                                    <span>My Github</span>
+                                    <span className="text-xl">
+                                        <BsGithub />
+                                    </span>
+                                </Button>
+                            </Link>
                                 </SheetTrigger>
-                                <SheetTrigger asChild>
-                                    <Link href="/about">
-                                        <Button variant="link" className="w-full font-semibold text-md">
-                                            About
-                                        </Button>
-                                    </Link>
-                                </SheetTrigger>
-                                <SheetTrigger asChild>
-                                    <Link href="/privacy-policy">
-                                        <Button variant="link" className="w-full font-semibold text-md">
-                                            Privacy Policy
-                                        </Button>
-                                    </Link>
-                                </SheetTrigger>
+
+                                  
+                                
                                 <ModeToggle />
                             </div>
                         </SheetDescription>
